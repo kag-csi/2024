@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aufl&ouml;sung CSI 2024</title>
     <style>
+        html {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        h1 {
+            text-align: center;
+        }
         /* Stil für den Timer */
         #countdown {
             font-size: 24px;
@@ -14,6 +20,7 @@
     </style>
 </head>
 <body>
+    <h1>Aufl&ouml;sung Crime Scene</h1>
     <div id="countdown"></div>
 
     <script>
@@ -26,12 +33,11 @@
             const timeLeft = targetDate - now;
 
             if (timeLeft > 0) {
-                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-                document.getElementById("countdown").textContent = `Verbleibende Zeit: ${days} Tage, ${hours} Stunden, ${minutes} Minuten, ${seconds} Sekunden`;
+                document.getElementById("countdown").textContent = `Verbleibende Zeit: ${hours} Stunden, ${minutes} Minuten, ${seconds} Sekunden`;
             } else {
                 document.getElementById("countdown").textContent = "Der Timer ist abgelaufen!";
             }
