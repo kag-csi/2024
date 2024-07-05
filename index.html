@@ -67,7 +67,7 @@
                 const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-                document.getElementById("countdown").textContent = `Verbleibende Zeit: ${hours}:${minutes}:${seconds}`;
+                document.getElementById("countdown").textContent = `Verbleibende Zeit: ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
             } else {
                 document.getElementById("countdown").textContent = "Der Timer ist abgelaufen!";
             }
